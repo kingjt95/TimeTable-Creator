@@ -84,6 +84,9 @@
    </attribute>
   </widget>
   <widget class="QDockWidget" name="AddDataDockWindow">
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
    <attribute name="dockWidgetArea">
     <number>1</number>
    </attribute>
@@ -125,23 +128,79 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="1">
-            <widget class="QLineEdit" name="NumberLineEdit"/>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="TimeLabel">
-             <property name="text">
-              <string>Time</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QLineEdit" name="DescriptionLineEdit"/>
-           </item>
            <item row="1" column="0">
             <widget class="QLabel" name="CategoryLabel">
              <property name="text">
               <string>Category</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="NumberLineEdit">
+             <property name="inputMask">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="DescriptionLineEdit">
+             <property name="placeholderText">
+              <string>Detail</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="DescriptionLabel">
+             <property name="text">
+              <string>Description</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="CategoryLineEdit">
+             <property name="placeholderText">
+              <string>Project</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="2">
+            <widget class="QRadioButton" name="CurrentRadioButton">
+             <property name="text">
+              <string>Current Time</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QLineEdit" name="TimeLineEdit">
+             <property name="placeholderText">
+              <string>HH:MM</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0" colspan="2">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="QRadioButton" name="CustomRadioButton">
+             <property name="text">
+              <string>Custom Time</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="TimeLabel">
+             <property name="text">
+              <string>Time</string>
              </property>
             </widget>
            </item>
@@ -152,23 +211,7 @@
              </property>
             </widget>
            </item>
-           <item row="7" column="1">
-            <widget class="QLineEdit" name="DateLineEdit"/>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLineEdit" name="CategoryLineEdit"/>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="DescriptionLabel">
-             <property name="text">
-              <string>Description</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
-            <widget class="QLineEdit" name="TimeLineEdit"/>
-           </item>
-           <item row="3" column="0" colspan="2">
+           <item row="10" column="0" colspan="2">
             <layout class="QHBoxLayout" name="horizontalLayout">
              <property name="leftMargin">
               <number>0</number>
@@ -195,32 +238,18 @@
              </item>
             </layout>
            </item>
-           <item row="4" column="0" colspan="2">
-            <widget class="QRadioButton" name="CurrentRadioButton">
+           <item row="7" column="1">
+            <widget class="QLineEdit" name="DateLineEdit">
+             <property name="inputMask">
+              <string/>
+             </property>
              <property name="text">
-              <string>Current Time</string>
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string>yyyy-mm-dd</string>
              </property>
             </widget>
-           </item>
-           <item row="5" column="0" colspan="2">
-            <widget class="QRadioButton" name="CustomRadioButton">
-             <property name="text">
-              <string>Custom Time</string>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="0" colspan="2">
-            <spacer name="verticalSpacer">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
            </item>
           </layout>
          </item>
@@ -282,6 +311,19 @@
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>NumberLineEdit</tabstop>
+  <tabstop>CategoryLineEdit</tabstop>
+  <tabstop>DescriptionLineEdit</tabstop>
+  <tabstop>CurrentRadioButton</tabstop>
+  <tabstop>CustomRadioButton</tabstop>
+  <tabstop>DateLineEdit</tabstop>
+  <tabstop>TimeLineEdit</tabstop>
+  <tabstop>StartButton</tabstop>
+  <tabstop>StopButton</tabstop>
+  <tabstop>ShowDataTable</tabstop>
+  <tabstop>AddDataScrollArea</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

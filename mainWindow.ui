@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>637</width>
+    <width>907</width>
     <height>448</height>
    </rect>
   </property>
@@ -16,7 +16,14 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QTableWidget" name="ShowDataTable"/>
+     <widget class="QTableWidget" name="ShowDataTable">
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectItems</enum>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -25,7 +32,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>637</width>
+     <width>907</width>
      <height>21</height>
     </rect>
    </property>
@@ -141,7 +148,7 @@
            <item row="7" column="0">
             <widget class="QLabel" name="DateLabel">
              <property name="text">
-              <string>Data</string>
+              <string>Date</string>
              </property>
             </widget>
            </item>

@@ -21,6 +21,8 @@ class MainWindow(QMainWindow):
         table = self.ShowDataTable
         table.itemSelectionChanged.connect(
              lambda: self.on_selection_changed(table.selectedItems()))
+        self.UpdateSettings2()
+
     ### Loading
     def csv2table(self):
         self.csv2df()
@@ -144,6 +146,23 @@ class MainWindow(QMainWindow):
         else:
             self.TimeLineEdit.setEnabled(True)
             self.DateLineEdit.setEnabled(True)
+    def UpdateSettings2(self): # :)
+        try:
+            table = self.ShowDataTable
+            row = self.df.shape[0] - 1
+
+            Number = self.df.iloc[row,self.df.columns.get_loc("Number")]
+            Category = self.df.iloc[row,self.df.columns.get_loc("Category")]
+            Description = self.df.iloc[row,self.df.columns.get_loc("Description")]
+
+            self.NumberLineEdit.setText(str(Number))
+            self.CategoryLineEdit.setText(str(Category))
+            self.DescriptionLineEdit.setText(str(Description))
+
+
+        except:
+            self.NumberLineEdit.setText('0')
+
     ### Selecting data in table
     def on_selection_changed(self, selectedItems):
         self.table2csv()

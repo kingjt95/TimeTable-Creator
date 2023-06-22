@@ -1,1 +1,82 @@
 Number,Category,Description,StartDate,StartTime,EndDate,EndTime
+1,Report,Write Plots in Excel file,2023-05-24,10:42:28,2023-05-24,11:34:16
+2,Report,Write Plots in Excel file,2023-05-24,12:59:08,2023-05-24,13:37:15
+3,Report,Write Plots in Excel file,2023-05-24,14:29:28,2023-05-24,15:12:23
+4,Mes,Organizing Sarcheshmeh data,2023-05-24,19:03:34,2023-05-24,19:10:11
+5,Mes,Organizing Sarcheshmeh data,2023-05-24,19:25:24,2023-05-24,19:29:31
+6,Mes,Organizing Sarcheshmeh data,2023-05-24,19:33:28,2023-05-24,19:43:23
+7,Mes,Organizing Sarcheshmeh data,2023-05-24,19:58:42,2023-05-24,20:06:42
+8,Mes,Organizing Sarcheshmeh data,2023-05-25,08:00:00,2023-05-25,10:00:00
+9,Mes,Organizing Sarcheshmeh data,2023-05-25,20:53:20,2023-05-25,22:30:48
+10,Mes,Organizing Sarcheshmeh data,2023-05-25,23:03:27,2023-05-26,00:19:13
+11,Reort,Write Plots in Excel file,2023-05-26,13:54:57,2023-05-26,14:32:26
+12,Reort,Write Plots in Excel file,2023-05-27,10:24:12,2023-05-27,10:28:30
+13,Diag,meeting,2023-05-28,09:30:17,2023-05-28,10:30:20
+14,Report,Write Plots in Excel file,2023-05-29,16:04:01,2023-05-29,18:05:44
+15,Report,Write Plots in Excel file,2023-05-30,14:48:49,2023-05-30,15:09:32
+16,Report,Write Plots in Excel file,2023-05-31,09:56:34,2023-05-31,10:02:24
+17,Report,Write Plots in Excel file,2023-05-31,10:04:52,2023-05-31,10:50:55
+18,Diag,Meeting,2023-05-31,17:11:36,2023-05-31,18:00:58
+19,Mes,Organizing Data,2023-05-31,22:06:03,2023-06-01,00:13:36
+20,Mes,Organizing Data,2023-06-01,12:04:55,2023-06-01,12:41:53
+21,Mes,Finding Frequencies for bearing code,2023-06-02,09:35:00,2023-06-02,11:23:13
+22,Mes,Meeting with Mr. Yadegari on labeling data,2023-06-02,18:13:26,2023-06-02,19:42:23
+23,Mes,Finding Frequencies for bearing code,2023-06-02,20:18:35,2023-06-02,21:23:45
+24,Mes,Finding Frequencies for bearing code,2023-06-02,22:50:18,2023-06-02,22:57:55
+25,Mes,Finding Frequencies for bearing code,2023-06-02,23:05:37,2023-06-02,23:18:32
+26,Mes,Finding Frequencies for bearing code,2023-06-03,01:29:39,2023-06-03,02:00:24
+27,Mes,extraxt missing data from db,2023-06-03,09:15:06,2023-06-03,10:25:36
+28,Mes,labeling data ,2023-06-03,10:25:51,2023-06-03,11:37:02
+29,Report,Write Plots in Excel file,2023-06-04,10:52:31,2023-06-04,11:48:08
+30,Report,Write Plots in Excel file,2023-06-05,10:44:41,2023-06-05,12:04:47
+31,Report,Write Plots in Excel file,2023-06-05,12:46:45,2023-06-05,13:07:05
+32,Report,Write Plots in Excel file,2023-06-05,13:14:49,2023-06-05,13:43:36
+33,Mes,Checking Maintenance History,2023-06-06,10:23:38,2023-06-06,10:39:54
+34,Mes,labeling data ,2023-06-06,0,0,0
+35,Mes,meeting,2023-06-06,15:00:00,2023-06-06,16:00:46
+36,Report,Write Plots in Excel file,2023-06-06,16:20:52,2023-06-06,17:17:32
+37,Report,Write Plots in Excel file,2023-06-06,17:21:19,2023-06-06,17:28:01
+38,Report,Write Plots in Excel file,2023-06-06,17:37:59,2023-06-06,18:30:49
+39,Mes,Getting Report files from Behravesh,2023-06-07,10:12:44,2023-06-07,12:430:45
+40,Diag,Meeting,2023-06-07,15:00:00,2023-06-07,16:15:35
+41,Diag,Review of finalized doc by SFH,2023-06-07,16:32:56,2023-06-07,16:57:58
+42,Mes,Correcting ylabel in plots,2023-06-09,12:05:38,2023-06-09,12:22:21
+43,Mes,Matching maintenance events to CM data,2023-06-09,13:06:52,2023-06-09,14:11:10
+44,Diag,github,2023-06-11,10:07:06,2023-06-11,10:57:55
+45,Diag,Database,2023-06-11,11:05:52,2023-06-11,15:53:57
+46,Diag,Database,2023-06-11,16:20:32,2023-06-11,16:39:04
+47,Diag,Database,2023-06-11,19:01:33,2023-06-11,19:23:57
+48,Diag,Github workflow,2023-06-11,20:41:37,2023-06-11,22:48:07
+49,Diag,Debug finalized code to import new database,2023-06-12,10:45:53,2023-06-12,11:36:43
+50,Tiam,ui tree widget creating with given labels,2023-06-12,11:54:32,2023-06-12,13:41:45
+51,Diag,Technical meeting,2023-06-13,12:16:15,2023-06-13,12:16:15
+52,Diag,refactoring import section,2023-06-13,13:58:26,2023-06-13,14:18:15
+53,Report,Write Plots in Excel file,2023-06-13,14:19:07,2023-06-13,14:49:37
+54,Report,Write Plots in Excel file,2023-06-13,15:01:36,2023-06-13,17:38:27
+55,Report,Write Plots in Excel file,2023-06-13,18:55:34,2023-06-13,21:10:30
+56,Report,Write Plots in Excel file,2023-06-13,22:20:03,2023-06-13,22:54:25
+57,Report,Write Plots in Excel file,2023-06-13,23:27:19,2023-06-14,00:01:23
+58,Diag,Correcting dataset import,2023-06-14,12:49:58,2023-06-14,12:50:05
+59,Diag,Correcting dataset import,2023-06-15,11:20:21,2023-06-15,12:18:02
+60,Diag,Correcting dataset import,2023-06-15,15:49:56,2023-06-15,16:10:26
+61,Diag,Correcting dataset import,2023-06-15,16:22:15,2023-06-15,16:45:35
+62,Diag,Correcting dataset import,2023-06-15,20:08:04,2023-06-15,20:33:36
+63,Diag,Correcting dataset import,2023-06-15,23:42:13,2023-06-15,23:42:42
+64,Diag,Correcting dataset import,2023-06-15,23:48:58,2023-06-15,23:49:15
+65,Diag,Correcting dataset import,2023-06-16,00:41:06,2023-06-16,02:55:36
+66,Diag,Correcting dataset import,2023-06-16,11:14:51,2023-06-16,11:50:42
+67,Diag,Correcting dataset import,2023-06-16,15:19:45,2023-06-16,15:31:11
+68,Diag,Correcting dataset import,2023-06-16,15:41:48,2023-06-16,16:19:46
+69,Diag,Correcting dataset import,2023-06-16,21:44:20,2023-06-16,22:10:14
+70,Diag,Correcting dataset import,2023-06-16,23:11:28,2023-06-17,02:53:06
+71,Diag,Meeting on results of correcting dataset import,2023-06-17,17:30:00,2023-06-17,18:23:43
+72,Meeting,Software development Sunaday meetings,2023-06-18,15:00:00,2023-06-18,15:33:00
+73,Diag,Correcting dataset import,2023-06-17,22:02:11,2023-06-17,23:41:15
+74,Mes,matching events to graghs,2023-06-21,09:09:59,2023-06-21,10:01:30
+75,Mes,Re-extracting some data from vibro designer,2023-06-21,12:20:15,2023-06-21,13:14:32
+76,Mes,Re-extracting some data from vibro designer,2023-06-21,13:18:32,2023-06-21,13:30:18
+77,Mes,Re-extracting some data from vibro designer,2023-06-22,08:23:38,2023-06-22,09:25:11
+78,Mes,Creating Github repo,2023-06-22,09:25:25,2023-06-22,10:12:47
+79,Mes,matching events to graghs,2023-06-22,10:20:09,2023-06-22,10:23:57
+80,Mes,matching events to graghs,2023-06-22,10:39:34,2023-06-22,11:47:24
+81,Mes,matching events to graghs,2023-06-22,12:06:55,nan,nan

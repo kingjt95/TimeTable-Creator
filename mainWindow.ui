@@ -6,12 +6,17 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>556</width>
+    <width>864</width>
     <height>448</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+    font-family: &quot;Segoe UI&quot;;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -41,7 +46,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>556</width>
+     <width>864</width>
      <height>21</height>
     </rect>
    </property>
@@ -81,18 +86,12 @@
    <addaction name="menuHel"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <widget class="QToolBar" name="toolBar">
-   <property name="windowTitle">
-    <string>toolBar</string>
-   </property>
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
   <widget class="QDockWidget" name="AddDataDockWindow">
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
    <property name="features">
     <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
    </property>
@@ -100,7 +99,7 @@
     <string>Work Time Pane</string>
    </property>
    <attribute name="dockWidgetArea">
-    <number>1</number>
+    <number>2</number>
    </attribute>
    <widget class="QWidget" name="AddDataDockContents">
     <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -126,8 +125,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>216</width>
-          <height>371</height>
+          <width>204</width>
+          <height>383</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">

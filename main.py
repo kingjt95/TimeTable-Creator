@@ -2,15 +2,17 @@ import sys
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QMainWindow, QTableWidget, QTableWidgetItem,\
                             QAction, qApp, QApplication, QFileDialog
+
 import pandas as pd
 import numpy as np
 from datetime import datetime, date, time
 import json
+import qdarkstyle
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("mainWindow.ui", self)
-        self.setWindowTitle('TimeTable Creator')
+        self.setupUI()
         self.getConfig()
         self.csv2table()
         self.setupMenubar()
@@ -26,7 +28,10 @@ class MainWindow(QMainWindow):
         table.itemSelectionChanged.connect(
              lambda: self.on_selection_changed(table.selectedItems()))
         self.UpdateSettings2()
-
+        self.resizeTableToContents()
+    def setupUI(self):
+        uic.loadUi("mainWindow.ui", self)
+        self.setWindowTitle('TimeTable Creator')
     ### Config File
     def getConfig(self):
 
@@ -89,9 +94,6 @@ class MainWindow(QMainWindow):
             self.saveConfig()
             self.csv2table()
             self.UpdateSettings2()
-
-
-
     def csv2table(self):
         self.csv2df()
         self.df2table()
@@ -101,8 +103,6 @@ class MainWindow(QMainWindow):
             filename = self.workingFile
         self.setWindowTitle('TimeTable Creator: '+ filename)
         self.statusbar.showMessage('Loaded data from '+ filename  + '!', 2000)
-
-
     def csv2df(self):
         # print(self.workingFile)
         try:
@@ -123,7 +123,6 @@ class MainWindow(QMainWindow):
                 table.setItem(i, j, item)
         self.resizeTableToContents()
         table.scrollToBottom()
-
     ### Saving
     def table2csv(self):
         self.table2df()
@@ -158,7 +157,6 @@ class MainWindow(QMainWindow):
             self.statusbar.showMessage('Saved on '+ filename  + '!', 2000)
         except:
             self.statusbar.showMessage('Warning! Unable to Save!', 2000)
-
     ### Buttons Trigger
     def PressedStart(self):
         table = self.ShowDataTable
@@ -222,11 +220,38 @@ class MainWindow(QMainWindow):
 
             item = QTableWidgetItem(self.DateLineEdit.text())
             table.setItem(rowNumber, self.df.columns.get_loc("EndDate"), item)
-
+        # set duration
+        self.calculateDifference(rowNumber)
+        # saving to dg and csv and resizing the rows
         self.table2df()
         self.df2csv()
         self.resizeTableToContents()
         table.scrollToBottom()
+    ### Calculate Duration
+    def calculateDifference(self, rowNumber):
+        try:
+            # get data from the table
+            table = self.ShowDataTable
+            startDate = table.item(rowNumber, self.df.columns.get_loc("StartDate")).text()
+            startTime = table.item(rowNumber, self.df.columns.get_loc("StartTime")).text()
+            endDate = table.item(rowNumber, self.df.columns.get_loc("EndDate")).text()
+            endTime = table.item(rowNumber, self.df.columns.get_loc("EndTime")).text()
+            # convert to date time format
+            start_datetime = datetime.strptime(' '.join([startDate, startTime]), '%Y-%m-%d %H:%M:%S')
+            end_datetime = datetime.strptime(' '.join([endDate, endTime]), '%Y-%m-%d %H:%M:%S')
+            # Calculate the time difference
+            time_difference = end_datetime - start_datetime
+            time_defference_seconds = time_difference.total_seconds()
+            time_defference_hours = time_defference_seconds / 3600
+            # write to duration column
+            item = QTableWidgetItem(str(round(time_defference_hours,3)))
+            table.setItem(rowNumber, self.df.columns.get_loc("Duration"), item)
+        except:
+            item = QTableWidgetItem('nan')
+            table.setItem(rowNumber, self.df.columns.get_loc("Duration"), item)
+            self.statusbar.showMessage(f"Can't calculate duration for row number {rowNumber}", 2000)
+
+
     ### Update UpdateSettings
     def UpdateSettings(self):
         if self.CurrentRadioButton.isChecked():
@@ -261,7 +286,10 @@ class MainWindow(QMainWindow):
         for j in range(self.df.shape[1]):
             table.resizeColumnToContents(j)
 
+
 app = QtWidgets.QApplication(sys.argv)
+dark_stylesheet = qdarkstyle.load_stylesheet_pyqt5()
+app.setStyleSheet(dark_stylesheet)
 window = MainWindow()
 window.show()
 app.exec()
